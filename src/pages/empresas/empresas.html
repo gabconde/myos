@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Empresas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+  <ion-list>
+    <button ion-item (click)="buttonClick(1)">
+        Empresa 1
+    </button>
+    <button ion-item (click)="buttonClick(2)">
+        Empresa 2
+    </button>
+    <button ion-item (click)="buttonClick(3)">
+        Empresa 3
+    </button>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <button ion-button full icon-start [navPush]="cadempresaPage">
+    <ion-icon name="add"></ion-icon>
+      Incluir
+  </button>
+</ion-footer>
