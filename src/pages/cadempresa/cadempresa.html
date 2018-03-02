@@ -4,45 +4,44 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <form ((ngSubmit)="cadastrarEmpresa()")>
+<ion-content padding no-bounce>
+    <form (ngSubmit)="cadastrarEmpresa()">
         <ion-list>
             <ion-item>
-                <ion-input type="text" placeholder="Nome Fantasia" required id="nomeEmpresa"></ion-input>
+                <ion-input type="text" placeholder="Nome Fantasia" required [(ngModel)]="empresa.nome" name="nome"></ion-input>
             </ion-item>
 
             <ion-item>
-                <ion-input type="text" placeholder="Razão Social" required id="razaoEmpresa"></ion-input>
+                <ion-input type="text" placeholder="Razão Social" required [(ngModel)]="empresa.razao" name="razao"></ion-input>
             </ion-item>
 
             <ion-item>
-                <ion-input type="number" placeholder="CNPJ" required id="cnpjEmpresa"></ion-input>
+                <ion-input type="number" placeholder="CNPJ" required [(ngModel)]="empresa.cnpj" name="cnpj"></ion-input>
             </ion-item>
 
             <ion-item>
-                <ion-input type="address" placeholder="Endereço" required id="enderecoEmpresa"></ion-input>
+                <ion-input type="address" placeholder="Endereço" required [(ngModel)]="empresa.endereco" name="endereco"></ion-input>
             </ion-item>
 
             <ion-item>
-                <ion-input type="number" placeholder="CEP" required id="cepEmpresa"></ion-input>
+                <ion-input type="number" placeholder="CEP" required [(ngModel)]="empresa.cep" name="cep"></ion-input>
             </ion-item>
 
             <ion-item>
-                <ion-input type="number" placeholder="Telefone" required id="telefoneEmpresa"></ion-input>
+                <ion-input type="number" placeholder="Telefone" required [(ngModel)]="empresa.telefone" name="telefone"></ion-input>
             </ion-item>
 
             <ion-item>
-                <ion-input type="email" placeholder="Email" required id="emailEmpresa"></ion-input>
+                <ion-input type="email" placeholder="Email" required [(ngModel)]="empresa.email" name="email"></ion-input>
             </ion-item>
         </ion-list>
+        <button ion-button full icon-start type="submit">
+            <ion-icon name="checkmark"></ion-icon>
+            Salvar
+        </button>
+        <button ion-button full icon-start>
+            <ion-icon name="trash"></ion-icon>
+            Limpar
+        </button>
     </form>
 </ion-content>
-
-<ion-footer>
-    <button ion-button full>
-        Salvar
-    </button>
-    <button ion-button full>
-        Limpar
-    </button>
-</ion-footer>

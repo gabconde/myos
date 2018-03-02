@@ -7,16 +7,14 @@ import { NavController } from 'ionic-angular';
 })
 export class CadEmpresaPage {
 
-  private nomeEmpresa: string;
-  private razaoEmpresa: string;
-  private cnpjEmpresa: number;
-  private enderecoEmpresa: string;
-  private cepEmpresa: number;
-  private telefoneEmpresa: number;
-  private emailEmpresa: string;
+  empresa = {};
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  cadastrarEmpresa() {
+    console.log(this.empresa);
   }
 
 }
