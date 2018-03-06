@@ -9,6 +9,10 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CadEmpresaPage } from '../pages/cadempresa/cadempresa';
 
+import { SQLite } from '@ionic-native/sqlite'
+import { DatabaseProvider } from '../providers/database/database';
+import { EmpresaProvider } from '../providers/empresa/empresa';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -37,7 +41,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    SQLite,
+    DatabaseProvider,
+    EmpresaProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

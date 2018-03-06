@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding no-bounce>
-    <form (ngSubmit)="cadastrarEmpresa()">
+    <form (ngSubmit)="submitEmpresa()">
         <ion-list>
             <ion-item>
                 <ion-input type="text" placeholder="Nome Fantasia" required [(ngModel)]="empresa.nome" name="nome"></ion-input>
@@ -38,10 +38,6 @@
         <button ion-button full icon-start type="submit">
             <ion-icon name="checkmark"></ion-icon>
             Salvar
-        </button>
-        <button ion-button full icon-start>
-            <ion-icon name="trash"></ion-icon>
-            Limpar
         </button>
     </form>
 </ion-content>
